@@ -21,10 +21,10 @@
   .grad-text { background:linear-gradient(90deg,#f97316,#fbbf24); -webkit-background-clip:text; background-clip:text; color:transparent; }
   .hero-fx { background:linear-gradient(180deg,rgba(6,10,15,.75),rgba(6,10,15,.96)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1700&q=70') center/cover no-repeat; }
   /* GSAP initial states — only applied when JS adds .gsap-ready, so no-JS users still see content */
-  .gsap-ready [data-anim] { opacity: 0; }
+  .gsap-ready [data-anim="card"], .gsap-ready [data-anim="fade"] { opacity: 0; }
   .will-animate { will-change: transform, opacity; }
   @media (prefers-reduced-motion: reduce) {
-    .gsap-ready [data-anim] { opacity: 1 !important; transform: none !important; }
+    .gsap-ready [data-anim="card"], .gsap-ready [data-anim="fade"] { opacity: 1 !important; transform: none !important; }
   }
   .focus-visible-ring:focus-visible { outline:3px solid #f97316; outline-offset:2px; }
 </style>
@@ -270,7 +270,6 @@
 
   // 1. Hero entrance — clear the CSS pre-hide first, then animate IN (no .from() traps)
   const heroTargets = ['[data-anim="hero-badge"]','[data-anim="line"]','[data-anim="hero-copy"]','[data-anim="hero-cta"]','[data-anim="hero-stats"]','[data-float]'];
-  gsap.set(heroTargets.join(','), { clearProps: 'opacity' });
   const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
   heroTl.from('[data-anim="hero-badge"]', { y: 20, opacity: 0, duration: .5 })
         .from('[data-anim="line"]', { y: 40, opacity: 0, duration: .7, stagger: .12 }, '-=.25')
@@ -319,7 +318,6 @@
   }
 
   // 5. Batch reveals for cards and fade blocks (efficient: one trigger per group)
-  gsap.set('[data-anim="card"], [data-anim="fade"]', { clearProps: 'opacity' });
   gsap.set('[data-anim="card"], [data-anim="fade"]', { opacity: 0, y: 28 });
   ScrollTrigger.batch('[data-anim="card"], [data-anim="fade"]', {
     start: 'top 88%',
