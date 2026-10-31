@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fitboxx Gym — Balliwala, Dehradun | Kickboxing · HIIT · Strength | Demo</title>
+<meta name="description" content="Demo website concept for Fitboxx Gym, Balliwala, Dehradun — kickboxing, HIIT, Zumba, functional training. Sample preview, not the gym's live site." />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { display3: ['Bebas Neue', 'sans-serif'], body3: ['Inter', 'system-ui', 'sans-serif'] },
+        colors: { flame: { DEFAULT: '#f97316', dark: '#ea580c' }, ink: '#0b0f14' },
+        keyframes: {
+          floaty: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+          marquee: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } },
+          fadeUp: { from: { opacity: '0', transform: 'translateY(20px)' }, to: { opacity: '1', transform: 'translateY(0)' } }
+        },
+        animation: {
+          floaty: 'floaty 4.5s ease-in-out infinite',
+          marquee: 'marquee 28s linear infinite',
+          fadeUp: 'fadeUp .7s ease-out both'
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Inter', system-ui, sans-serif; }
+  .font-display3 { font-family: 'Bebas Neue', sans-serif; letter-spacing: .02em; }
+  .hero-fx { background: linear-gradient(180deg, rgba(6,10,15,.72), rgba(6,10,15,.95)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1700&q=70') center/cover no-repeat; }
+  .grad-text { background: linear-gradient(90deg,#f97316,#fbbf24); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .fade-up { animation: fadeUp .7s ease-out both; }
+  @media (prefers-reduced-motion: reduce) { .animate-floaty, .animate-marquee, .fade-up { animation: none !important; } }
+  .focus-visible-ring:focus-visible { outline: 3px solid #f97316; outline-offset: 2px; }
+</style>
+</head>
+<body class="bg-ink text-slate-200 font-body3 antialiased">
+
+<!-- NAV -->
+<header class="sticky top-0 z-50 bg-ink/90 backdrop-blur border-b border-white/10">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16" aria-label="Main">
+    <a href="#top" class="flex items-center gap-2.5 focus-visible-ring rounded">
+      <span class="grid place-items-center w-10 h-10 rounded-md bg-flame text-ink font-display3 text-2xl leading-none">F</span>
+      <span class="font-display3 text-2xl tracking-wide">FITBOXX</span>
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+      <a href="#classes" class="hover:text-flame transition-colors">Classes</a>
+      <a href="#schedule" class="hover:text-flame transition-colors">Schedule</a>
+      <a href="#pricing" class="hover:text-flame transition-colors">Membership</a>
+      <a href="#reviews" class="hover:text-flame transition-colors">Reviews</a>
+      <a href="#visit" class="hover:text-flame transition-colors">Visit</a>
+    </div>
+    <a href="#join" class="bg-flame hover:bg-flame-dark text-ink font-bold text-sm px-4 py-2 rounded-md transition-colors">Free Trial</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="top" class="hero-fx">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-20 pb-24 sm:pt-28 sm:pb-32">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="fade-up">
+        <p class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-flame bg-flame/10 border border-flame/30 rounded-full px-3 py-1 mb-5">
+          <span class="w-1.5 h-1.5 rounded-full bg-flame animate-pulse"></span> Balliwala · Kanwali Road · Dehradun
+        </p>
+        <h1 class="font-display3 text-5xl sm:text-7xl leading-[0.92] text-white">
+          OPEN FROM <span class="grad-text">4 AM.</span><br>BUILT FOR EVERY BODY.
+        </h1>
+        <p class="mt-6 text-slate-300 max-w-md text-base sm:text-lg leading-relaxed">
+          Kickboxing, HIIT, Zumba, yoga and pure strength training under one roof — at Yash Plaza, above Suvidha Mega Mart. Members rate us 4.9★.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#join" class="bg-flame hover:bg-flame-dark text-ink font-bold px-6 py-3 rounded-md text-center transition-colors">Claim Your Free Trial</a>
+          <a href="https://wa.me/919997281881?text=Hi%20Fitboxx%2C%20I%27d%20like%20a%20free%20trial%20session" target="_blank" rel="noopener" class="border border-white/30 hover:border-flame hover:text-flame px-6 py-3 rounded-md text-center font-semibold transition-colors">WhatsApp Us →</a>
+        </div>
+        <div class="mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-400">
+          <span class="text-flame font-bold">4.9★</span><span class="text-slate-600">|</span>
+          <span>Open 4:00 AM – 10:00 PM</span><span class="text-slate-600">|</span>
+          <span>Kickboxing · HIIT · Zumba</span>
+        </div>
+      </div>
+
+      <!-- floating stat / review cards -->
+      <div class="relative hidden lg:block h-[430px]">
+        <div class="animate-floaty absolute top-0 right-4 w-64 rounded-xl bg-white text-slate-800 shadow-2xl p-4 rotate-2">
+          <div class="flex items-center gap-2 text-xs text-slate-500"><span class="grid place-items-center w-7 h-7 rounded-full bg-orange-100 text-flame font-bold">M</span> Manik Mahajan <span class="ml-auto text-flame">★★★★★</span></div>
+          <p class="mt-2 text-[13px] leading-relaxed">"Well equipped with good machines and equipment. The manager is really nice."</p>
+          <p class="mt-2 text-[10px] uppercase tracking-wider text-slate-400">Magicpin review</p>
+        </div>
+        <div class="animate-floaty absolute top-40 left-0 w-60 rounded-xl bg-white text-slate-800 shadow-2xl p-4 -rotate-2" style="animation-delay:1.2s">
+          <p class="text-[10px] uppercase tracking-wider text-slate-400 mb-1">Member favourite</p>
+          <p class="text-[13px] leading-relaxed">"A good mix of free weights and machines — well laid out gym."</p>
+        </div>
+        <div class="animate-floaty absolute bottom-0 right-12 w-56 rounded-xl bg-flame text-ink shadow-2xl p-4 rotate-1" style="animation-delay:.6s">
+          <p class="font-display3 text-4xl leading-none">4 AM</p>
+          <p class="text-xs font-semibold mt-1">Doors open — before the city wakes up.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE STRIP -->
+<div class="bg-flame text-ink overflow-hidden py-2.5">
+  <div class="flex whitespace-nowrap animate-marquee font-display3 text-xl tracking-widest">
+    <span class="flex gap-8 pr-8"><span>KICKBOXING</span><span>★</span><span>HIIT</span><span>★</span><span>ZUMBA</span><span>★</span><span>YOGA</span><span>★</span><span>FUNCTIONAL TRAINING</span><span>★</span><span>WEIGHT LOSS</span><span>★</span></span>
+    <span class="flex gap-8 pr-8" aria-hidden="true"><span>KICKBOXING</span><span>★</span><span>HIIT</span><span>★</span><span>ZUMBA</span><span>★</span><span>YOGA</span><span>★</span><span>FUNCTIONAL TRAINING</span><span>★</span><span>WEIGHT LOSS</span><span>★</span></span>
+  </div>
+</div>
+
+<!-- CLASSES -->
+<section id="classes" class="py-20 bg-[#0e1319]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <p class="text-xs font-bold uppercase tracking-[0.22em] text-flame">What we run</p>
+    <h2 class="font-display3 text-4xl sm:text-5xl text-white mt-2">SIX WAYS TO TRAIN</h2>
+    <p class="text-slate-400 mt-3 max-w-xl text-sm">Every programme below is listed on Fitboxx's own service pages — real offerings, presented properly.</p>
+    <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="rounded-xl bg-[#121922] border border-white/10 p-6 hover:border-flame/60 transition-colors">
+        <h3 class="font-display3 text-2xl text-white">KICKBOXING</h3>
+        <p class="text-sm text-slate-400 mt-2 leading-relaxed">Stand-up combat training — punching, kicking, footwork and conditioning. Great for cardio and confidence.</p>
+      </article>
+      <article class="rounded-xl bg-[#121922] border border-white/10 p-6 hover:border-flame/60 transition-colors">
+        <h3 class="font-display3 text-2xl text-white">HIIT</h3>
+        <p class="text-sm text-slate-400 mt-2 leading-relaxed">Short, all-out bursts with active recovery — the fastest way to burn and build in a 45-minute slot.</p>
+      </article>
+      <article class="rounded-xl bg-[#121922] border border-white/10 p-6 hover:border-flame/60 transition-colors">
+        <h3 class="font-display3 text-2xl text-white">FUNCTIONAL TRAINING</h3>
+        <p class="text-sm text-slate-400 mt-2 leading-relaxed">Movement that carries into real life — sled, kettlebell, bodyweight and mobility circuits.</p>
+      </article>
+      <article class="rounded-xl bg-[#121922] border border-white/10 p-6 hover:border-flame/60 transition-colors">
+        <h3 class="font-display3 text-2xl text-white">BODYBUILDING</h3>
+        <p class="text-sm text-slate-400 mt-2 leading-relaxed">Structured hypertrophy work with free weights and machines, supervised by coaches.</p>
+      </article>
+      <article class="rounded-xl bg-[#121922] border border-white/10 p-6 hover:border-flame/60 transition-colors">
+        <h3 class="font-display3 text-2xl text-white">ZUMBA</h3>
+        <p class="text-sm text-slate-400 mt-2 leading-relaxed">High-energy dance fitness — the session people actually look forward to.</p>
+      </article>
+      <article class="rounded-xl bg-[#121922] border border-white/10 p-6 hover:border-flame/60 transition-colors">
+        <h3 class="font-display3 text-2xl text-white">YOGA &amp; WEIGHT LOSS</h3>
+        <p class="text-sm text-slate-400 mt-2 leading-relaxed">Mobility, breathing and guided fat-loss programmes with diet support.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule" class="py-20 bg-ink">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-flame">Opening hours</p>
+        <h2 class="font-display3 text-4xl sm:text-5xl text-white mt-2">THE 4 AM CLUB</h2>
+      </div>
+      <p class="text-sm text-slate-400 max-w-sm">Doors open 4:00 AM, close 10:00 PM. Early-morning slots are what most gyms in Dehradun don't offer.</p>
+    </div>
+    <div class="mt-8 grid gap-4 sm:grid-cols-3">
+      <div class="rounded-xl border border-white/10 bg-[#121922] p-5">
+        <p class="font-display3 text-3xl text-flame">4:00 – 7:00 AM</p>
+        <p class="text-sm text-slate-400 mt-1">Early birds · Cardio &amp; strength</p>
+      </div>
+      <div class="rounded-xl border border-white/10 bg-[#121922] p-5">
+        <p class="font-display3 text-3xl text-white">7:00 AM – 6:00 PM</p>
+        <p class="text-sm text-slate-400 mt-1">Open floor · Personal training by slot</p>
+      </div>
+      <div class="rounded-xl border border-white/10 bg-[#121922] p-5">
+        <p class="font-display3 text-3xl text-flame">6:00 – 10:00 PM</p>
+        <p class="text-sm text-slate-400 mt-1">Evening batches · Classes &amp; HIIT</p>
+      </div>
+    </div>
+    <p class="mt-4 text-xs text-slate-500">Batch timings shown are indicative for this preview — the gym confirms the final timetable.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="py-20 bg-[#0e1319]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <p class="text-xs font-bold uppercase tracking-[0.22em] text-flame">Membership</p>
+    <h2 class="font-display3 text-4xl sm:text-5xl text-white mt-2">PICK YOUR PLAN</h2>
+    <p class="text-slate-400 mt-3 max-w-xl text-sm">Sample pricing for the preview — the gym sets the final numbers.</p>
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <div class="rounded-xl border border-white/10 bg-ink p-7 flex flex-col">
+        <h3 class="font-display3 text-2xl text-slate-200">MONTHLY</h3>
+        <p class="mt-3"><span class="font-display3 text-5xl text-white">₹1,200</span><span class="text-slate-500 text-sm">/mo</span></p>
+        <ul class="mt-5 space-y-2 text-sm text-slate-300 flex-1">
+          <li class="flex gap-2"><span class="text-flame">✓</span> Full gym floor access</li>
+          <li class="flex gap-2"><span class="text-flame">✓</span> 4 AM – 10 PM timings</li>
+          <li class="flex gap-2"><span class="text-flame">✓</span> Induction session</li>
+        </ul>
+        <a href="#join" class="mt-7 border border-white/20 hover:border-flame hover:text-flame rounded-md py-2.5 text-center text-sm font-bold transition-colors">Choose Monthly</a>
+      </div>
+      <div class="rounded-xl border-2 border-flame bg-[#121922] p-7 flex flex-col relative">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-widest bg-flame text-ink px-3 py-1 rounded-full">Most Popular</span>
+        <h3 class="font-display3 text-2xl text-flame">QUARTERLY</h3>
+        <p class="mt-3"><span class="font-display3 text-5xl text-white">₹3,200</span><span class="text-slate-500 text-sm">/3 mo</span></p>
+        <ul class="mt-5 space-y-2 text-sm text-slate-300 flex-1">
+          <li class="flex gap-2"><span class="text-flame">✓</span> Everything in Monthly</li>
+          <li class="flex gap-2"><span class="text-flame">✓</span> All group classes included</li>
+          <li class="flex gap-2"><span class="text-flame">✓</span> Body composition check</li>
+        </ul>
+        <a href="#join" class="mt-7 bg-flame hover:bg-flame-dark text-ink rounded-md py-2.5 text-center text-sm font-bold transition-colors">Start Quarterly</a>
+      </div>
+      <div class="rounded-xl border border-white/10 bg-ink p-7 flex flex-col">
+        <h3 class="font-display3 text-2xl text-slate-200">PERSONAL TRAINING</h3>
+        <p class="mt-3"><span class="font-display3 text-5xl text-white">₹5,000</span><span class="text-slate-500 text-sm">/mo</span></p>
+        <ul class="mt-5 space-y-2 text-sm text-slate-300 flex-1">
+          <li class="flex gap-2"><span class="text-flame">✓</span> 1-on-1 coaching</li>
+          <li class="flex gap-2"><span class="text-flame">✓</span> Diet + progress plan</li>
+          <li class="flex gap-2"><span class="text-flame">✓</span> Kickboxing / strength focus</li>
+        </ul>
+        <a href="#join" class="mt-7 border border-white/20 hover:border-flame hover:text-flame rounded-md py-2.5 text-center text-sm font-bold transition-colors">Enquire Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="py-20 bg-ink">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <p class="text-xs font-bold uppercase tracking-[0.22em] text-flame">Inside the box</p>
+    <h2 class="font-display3 text-4xl sm:text-5xl text-white mt-2">THE FLOOR</h2>
+    <p class="text-slate-400 mt-3 max-w-xl text-sm">Placeholder imagery for this preview — the gym's own photos replace these once shared.</p>
+    <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="aspect-[3/4] rounded-xl overflow-hidden relative group"><img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=700&q=60" alt="Weights floor (sample)" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" /><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-3 py-2 text-xs font-semibold">Strength floor</span></div>
+      <div class="aspect-[3/4] rounded-xl overflow-hidden relative group"><img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?auto=format&fit=crop&w=700&q=60" alt="Kickboxing training (sample)" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" /><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-3 py-2 text-xs font-semibold">Kickboxing</span></div>
+      <div class="aspect-[3/4] rounded-xl overflow-hidden relative group"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=700&q=60" alt="Functional training (sample)" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" /><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-3 py-2 text-xs font-semibold">Functional zone</span></div>
+      <div class="aspect-[3/4] rounded-xl overflow-hidden relative group"><img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=700&q=60" alt="Cardio machines (sample)" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" /><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-3 py-2 text-xs font-semibold">Cardio</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="py-20 bg-[#0e1319] overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <p class="text-xs font-bold uppercase tracking-[0.22em] text-flame">What members say</p>
+    <h2 class="font-display3 text-4xl sm:text-5xl text-white mt-2">4.9★ FROM MEMBERS</h2>
+    <p class="text-slate-400 mt-3 max-w-2xl text-sm">Public review excerpts from the gym's listings. The live site would show the full review feed with attribution and the owner's replies.</p>
+    <div class="mt-10 grid gap-5 md:grid-cols-3">
+      <figure class="animate-floaty rounded-xl bg-[#121922] border border-white/10 p-6">
+        <div class="text-flame text-sm">★★★★★</div>
+        <blockquote class="mt-3 text-sm text-slate-300 leading-relaxed">"Well equipped with good machines and equipment."</blockquote>
+        <figcaption class="mt-3 text-xs text-slate-500">Manik Mahajan · Magicpin</figcaption>
+      </figure>
+      <figure class="animate-floaty rounded-xl bg-[#121922] border border-white/10 p-6" style="animation-delay:1s">
+        <div class="text-flame text-sm">★★★★★</div>
+        <blockquote class="mt-3 text-sm text-slate-300 leading-relaxed">"The gym has every machine and is well laid out — a good mix of free weights and machines."</blockquote>
+        <figcaption class="mt-3 text-xs text-slate-500">Member review · AddressGuru listing</figcaption>
+      </figure>
+      <figure class="animate-floaty rounded-xl bg-[#121922] border border-white/10 p-6" style="animation-delay:2s">
+        <div class="text-flame text-sm">★★★★★</div>
+        <blockquote class="mt-3 text-sm text-slate-300 leading-relaxed">"The manager is really nice and the place is well run."</blockquote>
+        <figcaption class="mt-3 text-xs text-slate-500">Member review · AddressGuru listing</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT + JOIN -->
+<section id="visit" class="py-20 bg-ink">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 items-start">
+    <div>
+      <p class="text-xs font-bold uppercase tracking-[0.22em] text-flame">Find us</p>
+      <h2 class="font-display3 text-4xl sm:text-5xl text-white mt-2">COME TRAIN</h2>
+      <div class="mt-6 space-y-4 text-sm text-slate-300">
+        <p class="flex gap-3"><span class="text-flame">📍</span> 526, Yash Plaza, 1st Floor, Kanwali Road, Vasant Vihar — above Suvidha Mega Mart, Balliwala, Dehradun 248006</p>
+        <p class="flex gap-3"><span class="text-flame">🕒</span> Mon–Sat 4:00 AM – 10:00 PM · Sunday closed</p>
+        <p class="flex gap-3"><span class="text-flame">📞</span> +91 99972 81881</p>
+        <p class="flex gap-3"><span class="text-flame">✉️</span> info@fitboxxgym.com</p>
+      </div>
+      <div class="mt-6 rounded-xl overflow-hidden border border-white/10">
+        <iframe title="Map to Fitboxx Gym, Kanwali Road, Dehradun" src="https://www.google.com/maps?q=Yash%20Plaza%2C%20Kanwali%20Road%2C%20Vasant%20Vihar%2C%20Dehradun&output=embed" class="w-full h-64" style="border:0" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div id="join" class="scroll-mt-24 rounded-2xl border border-white/10 bg-[#121922] p-7 sm:p-8">
+      <h2 class="font-display3 text-3xl text-white">CLAIM A FREE TRIAL</h2>
+      <p class="text-sm text-slate-400 mt-1">Demo form — no data leaves this preview. The real version sends the request straight to the gym's WhatsApp.</p>
+      <form id="fbForm" class="mt-6 space-y-4" novalidate>
+        <div>
+          <label for="name" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">Full name</label>
+          <input id="name" type="text" required autocomplete="name" placeholder="Your name" class="w-full bg-ink border border-white/15 rounded-md px-3.5 py-2.5 text-sm text-white placeholder-slate-600 focus:border-flame focus:outline-none focus:ring-2 focus:ring-flame/40" />
+        </div>
+        <div>
+          <label for="phone" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">WhatsApp number</label>
+          <input id="phone" type="tel" required autocomplete="tel" pattern="[0-9+ ()-]{10,18}" placeholder="+91 XXXXX XXXXX" class="w-full bg-ink border border-white/15 rounded-md px-3.5 py-2.5 text-sm text-white placeholder-slate-600 focus:border-flame focus:outline-none focus:ring-2 focus:ring-flame/40" />
+        </div>
+        <div>
+          <label for="goal" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">What are you training for?</label>
+          <select id="goal" required class="w-full bg-ink border border-white/15 rounded-md px-3.5 py-2.5 text-sm text-white focus:border-flame focus:outline-none focus:ring-2 focus:ring-flame/40">
+            <option value="">Select one…</option>
+            <option>Weight loss</option><option>Muscle gain</option><option>Kickboxing</option><option>General fitness</option><option>Personal training</option>
+          </select>
+        </div>
+        <div>
+          <label for="slot" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">Preferred slot</label>
+          <select id="slot" required class="w-full bg-ink border border-white/15 rounded-md px-3.5 py-2.5 text-sm text-white focus:border-flame focus:outline-none focus:ring-2 focus:ring-flame/40">
+            <option value="">Select a slot…</option>
+            <option>4:00 – 7:00 AM</option><option>7:00 AM – 6:00 PM</option><option>6:00 – 10:00 PM</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full bg-flame hover:bg-flame-dark text-ink font-bold py-3 rounded-md transition-colors">Request Free Trial</button>
+        <p id="fbMsg" class="hidden text-sm text-flame font-semibold text-center" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-white/10 py-8">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+    <p>© 2026 Fitboxx Gym · Balliwala, Dehradun. Demo website — sample preview, not the gym's live site.</p>
+    <p><a href="#top" class="hover:text-flame transition-colors">Back to top</a></p>
+  </div>
+</footer>
+
+<script>
+  const f = document.getElementById('fbForm'), m = document.getElementById('fbMsg');
+  f.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!f.checkValidity()) { f.reportValidity(); return; }
+    const n = document.getElementById('name').value.trim();
+    f.reset();
+    m.classList.remove('hidden');
+    m.textContent = 'Thanks ' + n.split(' ')[0] + '! (Demo — no backend. Live version pings the gym instantly.)';
+    setTimeout(() => m.classList.add('hidden'), 6000);
+  });
+</script>
+</body>
+</html>
