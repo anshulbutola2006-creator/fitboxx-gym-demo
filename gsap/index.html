@@ -268,14 +268,16 @@
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // 1. Hero entrance timeline
+  // 1. Hero entrance — clear the CSS pre-hide first, then animate IN (no .from() traps)
+  const heroTargets = ['[data-anim="hero-badge"]','[data-anim="line"]','[data-anim="hero-copy"]','[data-anim="hero-cta"]','[data-anim="hero-stats"]','[data-float]'];
+  gsap.set(heroTargets.join(','), { clearProps: 'opacity' });
   const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
   heroTl.from('[data-anim="hero-badge"]', { y: 20, opacity: 0, duration: .5 })
         .from('[data-anim="line"]', { y: 40, opacity: 0, duration: .7, stagger: .12 }, '-=.25')
         .from('[data-anim="hero-copy"]', { y: 20, opacity: 0, duration: .5 }, '-=.35')
         .from('[data-anim="hero-cta"]', { y: 16, opacity: 0, duration: .5 }, '-=.3')
         .from('[data-anim="hero-stats"]', { y: 12, opacity: 0, duration: .4 }, '-=.3')
-        .from('[data-float]', { y: 30, opacity: 0, scale: .94, duration: .8, stagger: .14 }, '-=.8');
+        .from('[data-float]', { y: 30, opacity: 0, scale: .94, duration: .8, stagger: .14, immediateRender: false }, '-=.8');
 
   // 2. Floating review cards — gentle infinite drift (transform only)
   document.querySelectorAll('[data-float]').forEach((el, i) => {
@@ -317,6 +319,7 @@
   }
 
   // 5. Batch reveals for cards and fade blocks (efficient: one trigger per group)
+  gsap.set('[data-anim="card"], [data-anim="fade"]', { clearProps: 'opacity' });
   gsap.set('[data-anim="card"], [data-anim="fade"]', { opacity: 0, y: 28 });
   ScrollTrigger.batch('[data-anim="card"], [data-anim="fade"]', {
     start: 'top 88%',
