@@ -286,10 +286,12 @@
   const marquee = document.getElementById('marquee');
   const marqueeTween = gsap.to(marquee, { xPercent: -50, duration: 22, ease: 'none', repeat: -1 });
 
-  // 4. Pinned horizontal programme track
+  // 4. Pinned horizontal programme track — desktop only (pin is disorienting on phones)
   const track = document.getElementById('track');
   const pinWrap = document.getElementById('classesPin');
   const getDistance = () => Math.max(0, track.scrollWidth - window.innerWidth + 48);
+  const mm = gsap.matchMedia();
+  mm.add('(min-width: 1024px)', () => {
   gsap.to(track, {
     x: () => -getDistance(),
     ease: 'none',                     // required for 1:1 scroll mapping
@@ -303,6 +305,16 @@
       anticipatePin: 1
     }
   });
+  });
+  // Mobile fallback: let the track scroll horizontally with touch
+  if (window.matchMedia('(max-width: 1023px)').matches) {
+    pinWrap.style.height = 'auto';
+    pinWrap.style.padding = '4rem 0';
+    track.style.overflowX = 'auto';
+    track.style.width = '100%';
+    track.style.paddingBottom = '1rem';
+    gsap.set(track, { x: 0 });
+  }
 
   // 5. Batch reveals for cards and fade blocks (efficient: one trigger per group)
   gsap.set('[data-anim="card"], [data-anim="fade"]', { opacity: 0, y: 28 });
